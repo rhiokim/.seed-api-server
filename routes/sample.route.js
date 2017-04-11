@@ -1,12 +1,13 @@
+//@flow
 const express = require('express')
-const router = express.Router()
+const router: express$Router = express.Router()
 
 router.route('/')
-  .get((req, res, next) => {
+  .get((req: express$Request, res: express$Response, next: Function): void => {
     res.send('success')
   })
 
-router.get('/:id', (req, res) => {
+router.get('/:id', (req: express$Request, res: express$Response): void => {
   res.json(req.params)
 })
 
