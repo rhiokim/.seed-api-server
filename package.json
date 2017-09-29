@@ -50,6 +50,12 @@
     "rimraf": "^2.6.2",
     "validate-commit-msg": "^2.14.0"
   },
+  "flow-coverage-report": {
+    "includeGlob": ["routes/**/*.js"],
+    "excludeGlob": ["./**/__test__/**/*.hs", "./**/?(*.){test,spec}.js"],
+    "threshold": 10,
+    "type": ["text"]
+  },
   "config": {
     "validate-commit-msg": {
       "preset": "angular",
