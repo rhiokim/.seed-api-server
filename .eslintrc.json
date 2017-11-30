@@ -1,17 +1,19 @@
 {
+  "parser": "babel-eslint",
+  "plugins": ["import", "jest", "flowtype"],
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
   "env": {
     "node": true,
-    "es6": true
+    "jest": true
   },
-  "ecmaFeatures": {
-    "modules": true,
-    "destructuring": true
-  },
-  "globals": {
-  },
-  "plugins": [],
-  "extends": ["standard"],
-  "rules": {
-    "object-property-newline": "off"
+  "extends": ["standard", "plugin:flowtype/recommended"],
+  "rules": {},
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
   }
 }

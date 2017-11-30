@@ -16,4 +16,7 @@ npm-debug.log
 v8.log
 
 # flowtype
-flow-typed
+flow-typed/npm
+
+# build
+dist
