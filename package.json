@@ -4,7 +4,9 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci",
     "lint": "eslint 'lib/**/*.js'",
     "lint:msg": "validate-commit-msg",
     "start": "node .",
@@ -52,6 +54,7 @@
     "commitizen": "^2.9.6",
     "conventional-changelog-cli": "^1.3.5",
     "cz-conventional-changelog": "^2.1.0",
+    "cz-customizable": "^5.2.0",
     "dotenv": "^4.0.0",
     "eslint": "^4.12.0",
     "eslint-config-standard": "^10.2.1",
@@ -103,13 +106,11 @@
     ]
   },
   "config": {
-    "validate-commit-msg": {
-      "preset": "angular",
-      "warnOnFail": false,
-      "maxSubjectLength": 100
-    },
     "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.js"
     }
   }
 }
