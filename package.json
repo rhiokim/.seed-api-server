@@ -16,6 +16,8 @@
     "babel": "babel src -d dist --ignore spec.js,test.js",
     "babel:dev": "babel src -s -D -d dist",
     "deploy": "npm run build && npm run docker:build",
+    "flow": "flow",
+    "flow:coverage": "flow-coverage-report",
     "commit": "git cz",
     "precommit": "npm run lint",
     "commitmsg": "npm run lint:msg",
@@ -71,6 +73,19 @@
     "nsp": "^3.1.0",
     "rimraf": "^2.6.2",
     "validate-commit-msg": "^2.14.0"
+  },
+  "flow-coverage-report": {
+    "includeGlob": [
+      "src/**/*.js"
+    ],
+    "excludeGlob": [
+      "src/**/__tests__/**/*.js",
+      "src/**/?(*.){test,spec}.js"
+    ],
+    "threshold": 10,
+    "type": [
+      "text"
+    ]
   },
   "config": {
     "validate-commit-msg": {
